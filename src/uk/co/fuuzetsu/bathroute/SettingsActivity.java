@@ -11,10 +11,10 @@ public class SettingsActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TextView  tv=new TextView(this);
+        TextView tv = new TextView(this);
         tv.setTextSize(25);
-        tv.setGravity(Gravity.CENTER_VERTICAL);
-        tv.setText("This is a SettingsActivity.");
+        tv.setGravity(Gravity.TOP);
+        tv.setText("Settings");
 
         setContentView(tv);
     }
