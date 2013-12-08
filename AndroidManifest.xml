@@ -11,5 +11,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="settings activity">
+        </activity>
+
+        <activity
+            android:name=".MiscActivity"
+            android:label="misc activity">
+        </activity>
+
+        <activity
+            android:name=".PlacesActivity"
+            android:label="places activity">
+        </activity>
+
     </application>
 </manifest>
