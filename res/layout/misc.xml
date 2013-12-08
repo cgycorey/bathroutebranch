@@ -9,13 +9,13 @@
   <TextView
       android:id="@+id/misc_title"
       android:text="Misc"
-      android:textSize="25sp"
+      android:textSize="50sp"
       android:gravity="top"
       android:layout_width="match_parent"
       android:layout_height="wrap_content" />
 
-  <Spinner
-      android:id="@+id/misc_spinner"
+  <EditText
+      android:id="@+id/misc_edit_text"
       android:layout_width="match_parent"
       android:layout_height="wrap_content" />
 
