@@ -71,6 +71,22 @@ public class MainActivity
                              .setTabListener(this));
         }
 
+
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+                @Override
+                public void onPageSelected(int position) {
+                    actionBar.setSelectedNavigationItem(position);
+                }
+
+                @Override
+                public void onPageScrolled(int arg0, float arg1, int arg2) {
+                }
+
+                @Override
+                public void onPageScrollStateChanged(int arg0) {
+                }
+            });
     }
 
     private class TabsPagerAdapter extends FragmentPagerAdapter {
