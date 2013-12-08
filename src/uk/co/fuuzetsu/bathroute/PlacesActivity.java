@@ -3,6 +3,7 @@ package uk.co.fuuzetsu.bathroute;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 public class PlacesActivity extends Activity {
@@ -21,6 +22,4 @@ public class PlacesActivity extends Activity {
 
         lv.setAdapter(lvadapter);
     }
-
-
 }
