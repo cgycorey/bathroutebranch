@@ -35,5 +35,8 @@ public class MainActivity extends TabActivity
         tabHost.addTab(miscTab);
         tabHost.addTab(placesTab);
         tabHost.addTab(settingsTab);
+
+        /* Set ‘Places’ tab as the default active one. */
+        tabHost.setCurrentTab(1);
     }
 }
