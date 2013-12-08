@@ -42,8 +42,6 @@ public class MainActivity
 
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
-        // on tab selected
-        // show respected fragment view
         viewPager.setCurrentItem(tab.getPosition());
     }
 
@@ -86,13 +84,10 @@ public class MainActivity
 
             switch (index) {
             case 0:
-                // Top Rated fragment activity
                 return new MiscActivity();
             case 1:
-                // Games fragment activity
                 return new PlacesActivity();
             case 2:
-                // Movies fragment activity
                 return new SettingsActivity();
             }
 
@@ -101,7 +96,6 @@ public class MainActivity
 
         @Override
         public int getCount() {
-            // get item count - equal to number of tabs
             return 3;
         }
     }

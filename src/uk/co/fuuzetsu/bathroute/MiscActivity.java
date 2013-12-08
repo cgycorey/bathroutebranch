@@ -20,24 +20,15 @@ public class MiscActivity extends Fragment {
 
         View rootView = inflater.inflate(R.layout.misc, container, false);
 
+        final ListView lv = (ListView) rootView.findViewById(R.id.misc_list_view);
+
+        String[] values = new String[] { "Friends", "Computers", "Mailroom", "Toilets" };
+
+        ArrayAdapter<String> lvadapter
+            = new ArrayAdapter<String>(rootView.getContext(), android.R.layout.simple_list_item_1, values);
+
+        lv.setAdapter(lvadapter);
+
         return rootView;
     }
-
-
-    // @Override
-    // public void onCreate(Bundle savedInstanceState) {
-    //     super.onCreate(savedInstanceState);
-    //     setContentView(R.layout.misc);
-
-    //     final ListView lv = (ListView) findViewById(R.id.misc_list_view);
-
-    //     String[] values = new String[] { "Friends", "Computers", "Mailroom", "Toilets" };
-
-    //     ArrayAdapter<String> lvadapter
-    //         = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
-
-    //     lv.setAdapter(lvadapter);
-    // }
-
-
 }

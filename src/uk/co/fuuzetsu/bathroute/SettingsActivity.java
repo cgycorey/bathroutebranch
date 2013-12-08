@@ -22,22 +22,16 @@ public class SettingsActivity extends Fragment {
 
         View rootView = inflater.inflate(R.layout.settings, container, false);
 
+        final ListView lv = (ListView) rootView.findViewById(R.id.settings_list_view);
+
+        String[] values = new String[] { "Image", "Favourites", "Position broadcasting",
+                                         "Map", "Storage", "About" };
+
+        ArrayAdapter<String> lvadapter
+            = new ArrayAdapter<String>(rootView.getContext(), android.R.layout.simple_list_item_1, values);
+
+        lv.setAdapter(lvadapter);
+
         return rootView;
     }
-
-    // @Override
-    // public View onCreate(Bundle savedInstanceState) {
-    //     super.onCreate(savedInstanceState);
-    //     setContentView(R.layout.settings);
-
-    //     final ListView lv = (ListView) findViewById(R.id.settings_list_view);
-
-    //     String[] values = new String[] { "Image", "Favourites", "Position broadcasting",
-    //                                      "Map", "Storage", "About" };
-
-    //     ArrayAdapter<String> lvadapter
-    //         = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
-
-    //     lv.setAdapter(lvadapter);
-    // }
 }
