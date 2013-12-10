@@ -1,0 +1,142 @@
+@startuml
+
+State o-- android.location.Location
+State o-- PointOfInterest
+State o-- Path
+State o-- java.util.List
+State o-- MapPlaceable
+State o-- Pair
+State o-- java.util.Calendar
+State o-- Friend
+State o-- MapRenderer
+
+MapPlaceable o-- android.location.Location
+
+ServerConnection o-- UserConfig
+ServerConnection o-- java.net.Socket
+ServerConnection o-- java.util.List
+ServerConnection o-- F
+ServerConnection o-- State
+ServerConnection o-- Friend
+ServerConnection o-- android.location.Location
+
+PointOfInterest o-- java.util.List
+PointOfInterest o-- android.location.Location
+PointOfInterest o-- Utility
+PointOfInterest <|- MapPlaceable
+
+
+Path o-- fj.data.Zipper
+Path o-- Node
+Path o-- java.util.List
+
+UserConfig o-- java.security.PrivateKey
+UserConfig o-- java.security.PublicKey
+UserConfig o-- java.util.List
+UserConfig o-- Friend
+
+Friend o-- java.security.PublicKey
+Friend <|- MapPlaceable
+
+namespace android.location {
+          class Location {
+          }
+}
+
+namespace java.util {
+
+                    class Calendar {
+                    }
+
+                    class List {
+                    }
+
+}
+
+namespace java.net {
+          class Socket {
+          }
+}
+
+namespace java.security {
+          class PrivateKey {
+          }
+
+          class PublicKey {
+          }
+}
+
+namespace fj.data {
+          class Zipper {
+          }
+}
+
+
+
+class State {
+      -Location userLocation
+      -PointOfInterest destination
+      -Path currentPath
+      -List<? implements MapPlaceble> placeables
+      -List<Pair<Friend, Calendar>> locationShares
+      -MapRenderer mapRenderer
+}
+
+class MapRenderer {
+      +Boolean renderMap(State)
+}
+
+class Pair<L, R> {
+      -L left
+      -R right
+}
+
+interface MapPlaceable {
+      +Location getLocation()
+      +String getInformation
+}
+
+class ServerConnection {
+      -UserConfig userConfig
+      -Socket severSocket
+      -List<F<State, State>> stateMods
+      +Boolean sendLocation(List<Friend>, Location)
+      +State updateState(State)
+}
+
+class F<A, B> {
+      +B apply(A)
+}
+
+class PointOfInterest {
+      -List<Utility> utilities
+      -Location location
+}
+
+class Node {
+      -Location nodeLocation
+      -List<Node> neighbourNodes
+}
+
+class Utility {
+      -String name
+}
+
+class Path {
+      -Zipper<Node> nodes
+}
+
+class Friend {
+      -String name
+      -PublicKey publicKey
+}
+
+class UserConfig {
+      -PrivateKey privateKey
+      -PublicKey publicKey
+      -List<Friend> friends
+}
+
+hide empty members
+
+@enduml
