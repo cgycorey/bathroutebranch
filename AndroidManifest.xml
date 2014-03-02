@@ -4,7 +4,7 @@
       android:versionCode="1"
       android:versionName="1.0">
   <uses-sdk
-      android:minSdkVersion="19"
+      android:minSdkVersion="15"
       android:targetSdkVersion="19" />
 
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
@@ -29,6 +29,11 @@
         <activity
             android:name=".PlacesActivity"
             android:label="places activity">
+        </activity>
+
+        <activity
+            android:name=".MapActivity"
+            android:label="map activity">
         </activity>
 
     </application>
