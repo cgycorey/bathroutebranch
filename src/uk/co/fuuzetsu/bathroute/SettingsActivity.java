@@ -1,15 +1,12 @@
 package uk.co.fuuzetsu.bathroute;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import android.view.View;
 
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 
 import android.view.ViewGroup;

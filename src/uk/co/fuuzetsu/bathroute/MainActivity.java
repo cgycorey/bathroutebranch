@@ -1,20 +1,8 @@
 package uk.co.fuuzetsu.bathroute;
 
-import android.app.Activity;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
-import android.app.TabActivity;
-import android.content.Intent;
-import android.content.Context;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.util.Log;
-import android.widget.TextView;
-
-import android.view.View;
-import android.view.ViewGroup;
-
-
 import android.support.v4.view.ViewPager;
 import android.support.v4.app.Fragment;
 // import android.support.v4.app.FragmentTransaction;
